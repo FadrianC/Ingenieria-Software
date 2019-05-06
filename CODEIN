@@ -1,7 +1,46 @@
+
+print "\t1 - Conectarse"
+
+def menu():
+print "Modulos" 
+print "\1 - Modulo de Sistema"
+print "\2 - Modulo Almacén"
+print "\3 - Modulo Operador"
+print "\4 - Modulo Informes"
+
 //Modulo Sistema
+def menu1():
+print "Selecciona una opción" 
+print "\1 - Crear usuario"
+print "\2 - Modificar usuario"
+print "\3 - Consultar usuario"
+print "\4 - Eliminar usuario"
+print "\5 - Salir"
+
 
 //Modulo Almacén
+def menu2():
+print "Selecciona una opción" 
+print "\1 - Áreas"
+print "\2 - Artículos"
+print "\3 - Localidades"
+print "\4 - Salir"
 
 //Modulo Operador
+def menu3():
+print "Selecciona una opción" 
+print "\1 - Crear planilla"
+print "\2 - Modificar planilla"
+print "\3 - Consultar planilla"
+print "\4 - Eliminar planilla"
+print "\5 - Alertas planilla"
+print "\6 - Salir"
 
 //Modulo Informes
+def menu4():
+print "Selecciona una opción" 
+print "\1 - Verificar conteo de inventario"
+print "\2 - Porcentaje de conteos realizados"
+print "\3 - Consolidación de conteos"
+print "\4 - Reporte final de conteos"
+print "\5 - Salir"
