@@ -1,10 +1,10 @@
-print ("Conectarse")
+print ("CODEIN")
 print ("Usuario:")
 print ("Contraseña:")
 
 while True:
     print("")
-    print ("\tSelecciona una opción")
+    print ("\tSeleccione una opción: ")
     print ("Modulos")
     print ("1 - Modulo de Sistema")
     print ("2 - Modulo Almacén")
@@ -12,23 +12,35 @@ while True:
     print ("4 - Modulo Informes")
     print ("5 - Salir")
     
-    opcion=input("\tSeleccione una opción:")
+    opcion=input("\tSeleccione una opción: ")
     
     if opcion == "1":
         #Modulo Sistema
         while True:
             print("")
-            print ("\tSelecciona una opción")
+            print ("\tSeleccione una opción: ")
             print ("\t1 - Crear usuario")
             print ("\t2 - Modificar usuario")
             print ("\t3 - Consultar usuario")
             print ("\t4 - Eliminar usuario")
             print ("\t5 - Salir")
         
-            opcion1=input("\tSeleccione una opción:")
+            opcion1=input("\tSeleccione una opción: ")
            
             if opcion1 == "1":
-                # Funcion para la contraseña
+                
+                #Funcion para el número de documento
+                def documento(di):
+                    identidad= len(di)
+                    
+                    if identidad < 6:
+                        print ('\tEl número de identidad debe contener 6 dígitos')
+                    elif identidad > 12:
+                        print ('\tEl número de identidad no puede contene 12 dígitos')            
+                    else:
+                        return True
+                    
+                #Funcion para la contraseña
                 def contraseña(key):
                 
                       # Declara las variables
@@ -39,9 +51,9 @@ while True:
                       no_alpha = 0
                       space = 0
                 
-                      # Comprueba que la contraseña es correcta
+                      #Comprueba que la contraseña es correcta
                       if letters < 8:
-                          print ('La contraseña debe contener 8 caracteres')
+                          print ('\tLa contraseña debe contener 8 caracteres')
                       else:
                           for content in key:
                               if content.islower() == True:
@@ -56,64 +68,128 @@ while True:
                                   elif content.isalnum() == False:
                                       no_alpha += 1
                 
-                          # Comprueba si la contraseña cumple con los parametros
+                          #Comprueba si la contraseña cumple con los parametros
                           if lower_case >= 1:
                               if upper_case >= 1:
                                   if numeric >= 1:
                                       if no_alpha >= 1:
                                           if space >= 1:
-                                              print ('La contraseña no puede contener espacio en blancos')
+                                              print ('\tLa contraseña no puede contener espacio en blancos')
                                           else:
                                               return True
                                       else:
-                                          print ('La contraseña debe tener como minimo un caracter no alfanumerico')
+                                          print ('\tLa contraseña debe tener como minimo un caracter no alfanumerico')
                                   else:
-                                      print ('La contraseña debe tener como minimo un caracter numerico')
+                                      print ('\tLa contraseña debe tener como minimo un caracter numerico')
                               else:
-                                  print ('La contraseña debe tener como minimo un caracter en mayuscula')
+                                  print ('\tLa contraseña debe tener como minimo un caracter en mayuscula')
                           else:
-                              print ('La contraseña debe tener como minimo un caracter en minuscula')
+                              print ('\tLa contraseña debe tener como minimo un caracter en minuscula')
                 
-                  # Funcion para el nombre de usuario
-                def usuario(nombre):
+                #Funcion para el nombre de usuario
+                def usuario(user):
                 
-                      # Cuenta la cantidad de letras
+                      #Cuenta la cantidad de letras
+                      letters = len(user)
+                      answer = user.isalnum()
+                
+                      #Comprueba que el nombre cumple lo especificado
+                      if letters < 6:
+                          print ('\tEl nombre de usuario debe contener al menos 6 caracteres')
+                      elif letters > 12:
+                          print ('\tEl nombre de usuario no puede contener mas de 12 caracteres')
+                      elif answer == False:
+                          print ('\tEl nombre de usuario puede contener solo letras y numeros')
+                          print ('\tNota: Evita los espacios en blanco')
+                      else:
+                          return True
+                      
+                #Funcion para el nombre de usuario
+                def usuario1(nombre):
+                
+                      #Cuenta la cantidad de letras
                       letters = len(nombre)
                       answer = nombre.isalnum()
                 
-                      # Comprueba que el nombre cumple lo especificado
-                      if letters < 6:
-                          print ('El nombre de usuario debe contener al menos 6 caracteres')
+                      #Comprueba que el nombre cumple lo especificado
+                      if letters < 1:
+                          print ('\tEl nombre de usuario debe contener al menos 1 caracter')
                       elif letters > 12:
-                          print ('El nombre de usuario no puede contener mas de 12 caracteres')
+                          print ('\tEl nombre de usuario no puede contener mas de 12 caracteres')
                       elif answer == False:
-                          print ('El nombre de usuario puede contener solo letras y numeros')
-                          print ('Nota: Evita los espacios en blanco')
+                          print ('\tEl nombre de usuario puede contener solo letras')                      
+                      else:
+                          return True
+                      
+                #Funcion para el nombre de usuario
+                def usuario2(apellido):
+                
+                      #Cuenta la cantidad de letras
+                      letters = len(apellido)
+                      answer = apellido.isalnum()
+                
+                      #Comprueba que el nombre cumple lo especificado
+                      if letters < 1:
+                          print ('\tEl apellido de usuario debe contener al menos 1 caracteres')
+                      elif letters > 12:
+                          print ('\tEl apellido de usuario no puede contener mas de 12 caracteres')
+                      elif answer == False:
+                          print ('\tEl apellido de usuario puede contener solo letras')
                       else:
                           return True
                 
-                  # Funcion para simular el registro - falta guardarlo (TODO)
+                #Funcion para simular el registro - falta guardarlo (TO-DO)
                 def register():
-                
-                      nombre = input('\tIngrese un nombre de usuario: ')
+                    
+                      di=input('\tNúmero de documento: ')
                       while 1:
-                          answer01 = usuario(nombre)
+                          answer00 = documento(di)
+                          if answer00 == True:
+                              break
+                          else:
+                              di= input('\tIngrese un número de documento valido: ')
+                
+                      user = input('\tIngrese un nombre de usuario: ')
+                      while 1:
+                          answer01 = usuario(user)
                           if answer01 == True:
                               break
                           else:
-                              nombre = input('\tIngrese un nombre de usuario valido: ')
-                
-                      key = input('\tIngrese una contraseña: ')
+                              user = input('\tIngrese un nombre de usuario valido: ')
+                        
+                      nombre = input('\tNombre: ')
                       while 1:
-                          answer02 = contraseña(key)
+                          answer02 = usuario1(nombre)
                           if answer02 == True:
+                              break
+                          else:
+                              nombre = input('\tIngrese un nombre de usuario valido: ')
+                              
+                      apellido = input('\tApellido : ')
+                      while 1:
+                          answer03 = usuario2(apellido)
+                          if answer03 == True:
+                              break
+                          else:
+                              apellido = input('\tIngrese un apellido de usuario valido: ')                      
+        
+                
+                      key = input('\tContraseña: ')
+                      print ('\t')
+                      while 1:
+                          answer04 = contraseña(key)
+                          if answer04 == True:
                               break
                           else:
                               key = input('\tIngrese una contraseña valida: ')
                 
-                      print ('Se a finalizado el registro')
-                      print ('Su usuario es:', nombre)
-                      print ('Su contraseña es:', key)
+                      print ('\tSe ha finalizado el registro:')
+                      print ('\t')
+                      print ('\tNúmero de documento:', di)
+                      print ('\tUsuario:', user)
+                      print ('\tNombre:', nombre)
+                      print ('\tApellido:', apellido)
+                      print ('\tContraseña:', key)
                 register()
                 
             elif opcion1 == "2":
@@ -133,7 +209,7 @@ while True:
                 
     elif opcion == "2":
         #Modulo Almacén
-            print ("Selecciona una opción") 
+            print ("\tSeleccione una opción: ")
             print ("\t1 - Áreas")
             print ("\t2 - Artículos")
             print ("\t3 - Localidades")
@@ -141,7 +217,7 @@ while True:
 
     elif opcion == "3":
         #Modulo Operador
-            print ("Selecciona una opción")
+            print ("\tSeleccione una opción: ")
             print ("\t1 - Crear planilla")
             print ("\t2 - Modificar planilla")
             print ("\t3 - Consultar planilla")
@@ -151,7 +227,7 @@ while True:
 
     elif opcion == "4":
         #Modulo Informes
-            print ("Selecciona una opción")
+            print ("\tSeleccione una opción: ")
             print ("\t1 - Verificar conteo de inventario")
             print ("\t2 - Porcentaje de conteos realizados")
             print ("\t3 - Consolidación de conteos")
@@ -163,4 +239,3 @@ while True:
          
     else:
         print ("opcion incorrecta")
-
