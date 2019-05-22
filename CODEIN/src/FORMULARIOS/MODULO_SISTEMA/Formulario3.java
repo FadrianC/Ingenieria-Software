@@ -56,7 +56,7 @@ public class Formulario3 extends javax.swing.JFrame {
         jTextField11 = new javax.swing.JTextField();
         jTextField13 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        btnsalirformulario3 = new javax.swing.JButton();
 
         jTextField7.setText("jTextField1");
 
@@ -96,7 +96,12 @@ public class Formulario3 extends javax.swing.JFrame {
 
         jButton1.setText("CREAR");
 
-        jButton5.setText("SALIR");
+        btnsalirformulario3.setText("SALIR");
+        btnsalirformulario3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnsalirformulario3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -133,8 +138,8 @@ public class Formulario3 extends javax.swing.JFrame {
                         .addGap(51, 51, 51)
                         .addComponent(jButton1)
                         .addGap(249, 249, 249)
-                        .addComponent(jButton5)))
-                .addContainerGap(21, Short.MAX_VALUE))
+                        .addComponent(btnsalirformulario3)))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -178,12 +183,16 @@ public class Formulario3 extends javax.swing.JFrame {
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jButton5))
+                    .addComponent(btnsalirformulario3))
                 .addContainerGap(32, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnsalirformulario3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsalirformulario3ActionPerformed
+        dispose();
+    }//GEN-LAST:event_btnsalirformulario3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -202,14 +211,16 @@ public class Formulario3 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Formulario3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Formulario8.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Formulario3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Formulario8.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Formulario3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Formulario8.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Formulario3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Formulario8.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
@@ -222,8 +233,8 @@ public class Formulario3 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnsalirformulario3;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

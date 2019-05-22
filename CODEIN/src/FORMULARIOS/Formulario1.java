@@ -1,5 +1,8 @@
 package FORMULARIOS;
 
+import FORMULARIOS.MODULO_OPERADOR.Formulario7;
+import FORMULARIOS.MODULO_SISTEMA.Formulario2;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -28,25 +31,43 @@ public class Formulario1 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        Btnmodulosistema = new javax.swing.JButton();
+        btnmodulooperador = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        btnsalirformulario1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("Módulo de sistema");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Btnmodulosistema.setText("Módulo de sistema");
+        Btnmodulosistema.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BtnmodulosistemaActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Módulo de Almacén");
+        btnmodulooperador.setText("Módulo de Operador");
+        btnmodulooperador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnmodulooperadorActionPerformed(evt);
+            }
+        });
 
-        jButton3.setText("Módulo de Operador");
+        jButton3.setText("Módulo de Almacén");
 
         jButton4.setText("Módulo de Informes");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
+        btnsalirformulario1.setText("Salir");
+        btnsalirformulario1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnsalirformulario1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -55,32 +76,51 @@ public class Formulario1 extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(69, 69, 69)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnsalirformulario1, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnmodulooperador, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Btnmodulosistema, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(72, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(48, 48, 48)
-                .addComponent(jButton1)
+                .addComponent(Btnmodulosistema)
                 .addGap(18, 18, 18)
-                .addComponent(jButton2)
+                .addComponent(btnmodulooperador)
                 .addGap(18, 18, 18)
                 .addComponent(jButton3)
                 .addGap(18, 18, 18)
                 .addComponent(jButton4)
-                .addContainerGap(60, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(btnsalirformulario1)
+                .addContainerGap(48, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void BtnmodulosistemaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnmodulosistemaActionPerformed
+        Formulario2 verformulario2=new Formulario2();
+        
+        verformulario2.setVisible(true);
+    }//GEN-LAST:event_BtnmodulosistemaActionPerformed
+
+    private void btnsalirformulario1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsalirformulario1ActionPerformed
+        dispose();
+    }//GEN-LAST:event_btnsalirformulario1ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void btnmodulooperadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmodulooperadorActionPerformed
+        Formulario7 verformulario7=new Formulario7();
+        
+        verformulario7.setVisible(true);
+    }//GEN-LAST:event_btnmodulooperadorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -118,8 +158,9 @@ public class Formulario1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton Btnmodulosistema;
+    private javax.swing.JButton btnmodulooperador;
+    private javax.swing.JButton btnsalirformulario1;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     // End of variables declaration//GEN-END:variables

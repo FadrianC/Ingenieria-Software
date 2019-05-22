@@ -56,7 +56,7 @@ public class Formulario4B extends javax.swing.JFrame {
         jTextField11 = new javax.swing.JTextField();
         jTextField13 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        btnsalirformulario4B = new javax.swing.JButton();
 
         jTextField7.setText("jTextField1");
 
@@ -96,7 +96,12 @@ public class Formulario4B extends javax.swing.JFrame {
 
         jButton1.setText("GUARDAR");
 
-        jButton5.setText("SALIR");
+        btnsalirformulario4B.setText("SALIR");
+        btnsalirformulario4B.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnsalirformulario4BActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -133,7 +138,7 @@ public class Formulario4B extends javax.swing.JFrame {
                         .addGap(51, 51, 51)
                         .addComponent(jButton1)
                         .addGap(249, 249, 249)
-                        .addComponent(jButton5)))
+                        .addComponent(btnsalirformulario4B)))
                 .addContainerGap(21, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -178,12 +183,16 @@ public class Formulario4B extends javax.swing.JFrame {
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jButton5))
+                    .addComponent(btnsalirformulario4B))
                 .addContainerGap(32, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnsalirformulario4BActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsalirformulario4BActionPerformed
+        dispose();
+    }//GEN-LAST:event_btnsalirformulario4BActionPerformed
 
     /**
      * @param args the command line arguments
@@ -228,8 +237,8 @@ public class Formulario4B extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnsalirformulario4B;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

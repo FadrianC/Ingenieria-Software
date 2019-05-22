@@ -56,7 +56,7 @@ public class Formulario5 extends javax.swing.JFrame {
         jTextField11 = new javax.swing.JTextField();
         jTextField13 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        btnsalirformulario5 = new javax.swing.JButton();
 
         jTextField7.setText("jTextField1");
 
@@ -96,7 +96,12 @@ public class Formulario5 extends javax.swing.JFrame {
 
         jButton1.setText("BUSCAR");
 
-        jButton5.setText("SALIR");
+        btnsalirformulario5.setText("SALIR");
+        btnsalirformulario5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnsalirformulario5ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -133,7 +138,7 @@ public class Formulario5 extends javax.swing.JFrame {
                         .addGap(51, 51, 51)
                         .addComponent(jButton1)
                         .addGap(267, 267, 267)
-                        .addComponent(jButton5)))
+                        .addComponent(btnsalirformulario5)))
                 .addContainerGap(21, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -178,12 +183,16 @@ public class Formulario5 extends javax.swing.JFrame {
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jButton5))
+                    .addComponent(btnsalirformulario5))
                 .addContainerGap(32, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnsalirformulario5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsalirformulario5ActionPerformed
+        dispose();
+    }//GEN-LAST:event_btnsalirformulario5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -252,8 +261,8 @@ public class Formulario5 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnsalirformulario5;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

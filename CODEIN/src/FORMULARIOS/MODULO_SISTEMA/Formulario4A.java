@@ -56,8 +56,8 @@ public class Formulario4A extends javax.swing.JFrame {
         jTextField11 = new javax.swing.JTextField();
         jTextField13 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnsalirformulario4A = new javax.swing.JButton();
+        btnformulario4B = new javax.swing.JButton();
 
         jTextField7.setText("jTextField1");
 
@@ -97,9 +97,19 @@ public class Formulario4A extends javax.swing.JFrame {
 
         jButton1.setText("BUSCAR");
 
-        jButton5.setText("SALIR");
+        btnsalirformulario4A.setText("SALIR");
+        btnsalirformulario4A.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnsalirformulario4AActionPerformed(evt);
+            }
+        });
 
-        jButton2.setText("MODIFICAR");
+        btnformulario4B.setText("MODIFICAR");
+        btnformulario4B.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnformulario4BActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -136,9 +146,9 @@ public class Formulario4A extends javax.swing.JFrame {
                         .addGap(51, 51, 51)
                         .addComponent(jButton1)
                         .addGap(86, 86, 86)
-                        .addComponent(jButton2)
+                        .addComponent(btnformulario4B)
                         .addGap(90, 90, 90)
-                        .addComponent(jButton5)))
+                        .addComponent(btnsalirformulario4A)))
                 .addContainerGap(21, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -183,13 +193,23 @@ public class Formulario4A extends javax.swing.JFrame {
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jButton5)
-                    .addComponent(jButton2))
+                    .addComponent(btnsalirformulario4A)
+                    .addComponent(btnformulario4B))
                 .addContainerGap(32, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnformulario4BActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnformulario4BActionPerformed
+        Formulario4B verformulario4B=new Formulario4B();
+        
+        verformulario4B.setVisible(true);
+    }//GEN-LAST:event_btnformulario4BActionPerformed
+
+    private void btnsalirformulario4AActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsalirformulario4AActionPerformed
+        dispose();
+    }//GEN-LAST:event_btnsalirformulario4AActionPerformed
 
     /**
      * @param args the command line arguments
@@ -242,9 +262,9 @@ public class Formulario4A extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnformulario4B;
+    private javax.swing.JButton btnsalirformulario4A;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

@@ -30,25 +30,50 @@ public class Formulario2 extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        btnformulario3 = new javax.swing.JButton();
+        btnformulario4A = new javax.swing.JButton();
+        btnformulario5 = new javax.swing.JButton();
+        btnformulario6 = new javax.swing.JButton();
+        btnsalirformulario2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setText("MODULO DE SISTEMA");
 
-        jButton1.setText("CREAR USUARIO");
+        btnformulario3.setText("CREAR USUARIO");
+        btnformulario3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnformulario3ActionPerformed(evt);
+            }
+        });
 
-        jButton2.setText("MODIFICAR USUARIO");
+        btnformulario4A.setText("MODIFICAR USUARIO");
+        btnformulario4A.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnformulario4AActionPerformed(evt);
+            }
+        });
 
-        jButton3.setText("CONSULTAR USUARIO");
+        btnformulario5.setText("CONSULTAR USUARIO");
+        btnformulario5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnformulario5ActionPerformed(evt);
+            }
+        });
 
-        jButton4.setText("ELIMINAR USUARIO");
+        btnformulario6.setText("ELIMINAR USUARIO");
+        btnformulario6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnformulario6ActionPerformed(evt);
+            }
+        });
 
-        jButton5.setText("SALIR");
+        btnsalirformulario2.setText("SALIR");
+        btnsalirformulario2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnsalirformulario2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -57,12 +82,12 @@ public class Formulario2 extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(37, 37, 37)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton5)
-                    .addComponent(jButton4)
-                    .addComponent(jButton3)
-                    .addComponent(jButton2)
+                    .addComponent(btnsalirformulario2)
+                    .addComponent(btnformulario6)
+                    .addComponent(btnformulario5)
+                    .addComponent(btnformulario4A)
                     .addComponent(jLabel1)
-                    .addComponent(jButton1))
+                    .addComponent(btnformulario3))
                 .addContainerGap(37, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -71,20 +96,48 @@ public class Formulario2 extends javax.swing.JFrame {
                 .addGap(23, 23, 23)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addComponent(btnformulario3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton2)
+                .addComponent(btnformulario4A)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton3)
+                .addComponent(btnformulario5)
                 .addGap(11, 11, 11)
-                .addComponent(jButton4)
+                .addComponent(btnformulario6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton5)
+                .addComponent(btnsalirformulario2)
                 .addContainerGap(23, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnformulario3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnformulario3ActionPerformed
+        Formulario3 verformulario3=new Formulario3();
+        
+        verformulario3.setVisible(true);
+    }//GEN-LAST:event_btnformulario3ActionPerformed
+
+    private void btnformulario4AActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnformulario4AActionPerformed
+        Formulario4A verformulario4A=new Formulario4A();
+        
+        verformulario4A.setVisible(true);
+    }//GEN-LAST:event_btnformulario4AActionPerformed
+
+    private void btnformulario5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnformulario5ActionPerformed
+        Formulario5 verformulario5=new Formulario5();
+        
+        verformulario5.setVisible(true);
+    }//GEN-LAST:event_btnformulario5ActionPerformed
+
+    private void btnformulario6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnformulario6ActionPerformed
+        Formulario6 verformulario6=new Formulario6();
+        
+        verformulario6.setVisible(true);
+    }//GEN-LAST:event_btnformulario6ActionPerformed
+
+    private void btnsalirformulario2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsalirformulario2ActionPerformed
+        dispose();
+    }//GEN-LAST:event_btnsalirformulario2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -122,11 +175,11 @@ public class Formulario2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JButton btnformulario3;
+    private javax.swing.JButton btnformulario4A;
+    private javax.swing.JButton btnformulario5;
+    private javax.swing.JButton btnformulario6;
+    private javax.swing.JButton btnsalirformulario2;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

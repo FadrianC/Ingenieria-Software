@@ -56,7 +56,7 @@ public class Formulario6 extends javax.swing.JFrame {
         jTextField11 = new javax.swing.JTextField();
         jTextField13 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        btnsalirformulario6 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
         jTextField7.setText("jTextField1");
@@ -97,7 +97,12 @@ public class Formulario6 extends javax.swing.JFrame {
 
         jButton1.setText("BUSCAR");
 
-        jButton5.setText("SALIR");
+        btnsalirformulario6.setText("SALIR");
+        btnsalirformulario6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnsalirformulario6ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("ELIMINAR");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -143,7 +148,7 @@ public class Formulario6 extends javax.swing.JFrame {
                         .addGap(86, 86, 86)
                         .addComponent(jButton2)
                         .addGap(90, 90, 90)
-                        .addComponent(jButton5)))
+                        .addComponent(btnsalirformulario6)))
                 .addContainerGap(21, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -188,7 +193,7 @@ public class Formulario6 extends javax.swing.JFrame {
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jButton5)
+                    .addComponent(btnsalirformulario6)
                     .addComponent(jButton2))
                 .addContainerGap(32, Short.MAX_VALUE))
         );
@@ -199,6 +204,10 @@ public class Formulario6 extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void btnsalirformulario6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsalirformulario6ActionPerformed
+        dispose();
+    }//GEN-LAST:event_btnsalirformulario6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -267,9 +276,9 @@ public class Formulario6 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnsalirformulario6;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
